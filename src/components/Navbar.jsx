@@ -29,7 +29,7 @@ const Navbar = () => {
       )}
     >
       <div className='container flex items-center justify-between'>
-        {/*  mr-5 or mr-10 */}
+        {/*  mr-5 or mr-10 || around */}
         <a
           className='text-xl font-bold text-primary flex items-center'
           href='#hero'
