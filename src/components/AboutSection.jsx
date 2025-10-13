@@ -3,7 +3,7 @@ import { Briefcase, Code, User } from 'lucide-react';
 const AboutSection = () => {
   return (
     <section
-      id='about'
+      id='a   bout'
       className='py-24 px-4 relative'
     >
       <div className='container mx-auto max-w-5xl'>

@@ -1,4 +1,5 @@
 import AboutSection from '../components/AboutSection';
+import ContactSection from '../components/ContactSection';
 import Navbar from '../components/Navbar';
 import ProjectsSection from '../components/ProjectsSection';
 import StarBackground from '../components/StarBackground';
@@ -21,6 +22,7 @@ const Home = () => {
         <AboutSection />
         <SkillsSections />
         <ProjectsSection />
+        <ContactSection />
       </main>
       {/* ************* FOOTER ************* */}
     </div>
