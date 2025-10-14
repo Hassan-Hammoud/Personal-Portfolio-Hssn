@@ -1,3 +1,4 @@
+import emailjs from '@emailjs/browser';
 import {
   Facebook,
   Github,
@@ -8,23 +9,46 @@ import {
   Phone,
   Send,
 } from 'lucide-react';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useToast } from '../hooks/use-toast';
 import { cn } from '../lib/utils';
 
 const ContactSection = () => {
   const { toast } = useToast();
+  const form = useRef();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSubmit = e => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      toast({
-        title: 'Message sent!',
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
-      setIsSubmitting(false);
-    }, 1500);
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_YOUR_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_YOUR_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: import.meta.env.VITE_EMAILJS_YOUR_PUBLIC_KEY,
+        }
+      )
+      .then(
+        () => {
+          toast({
+            title: 'Message sent!',
+            description:
+              "Thank you for your message. I'll get back to you soon.",
+          });
+          setIsSubmitting(false);
+          e.target.reset();
+        },
+        error => {
+          toast({
+            title: 'Error sending message',
+            description: error.text,
+            variant: 'destructive',
+          });
+          console.error('FAILED...', error.text);
+          setIsSubmitting(false);
+        }
+      );
   };
 
   return (
@@ -127,6 +151,7 @@ const ContactSection = () => {
           <div className='bg-card p-8 rounded-lg shadow-xs'>
             <h3 className='text-2xl font-semibold mb-6'>Send A Message</h3>
             <form
+              ref={form}
               onSubmit={handleSubmit}
               className='space-y-6'
             >
@@ -141,7 +166,7 @@ const ContactSection = () => {
                 <input
                   type='text'
                   id='name'
-                  name='name'
+                  name='user_name'
                   className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary'
                   required
                   placeholder='John Doe...'
