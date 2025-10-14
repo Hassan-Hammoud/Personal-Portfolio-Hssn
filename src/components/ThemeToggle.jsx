@@ -29,8 +29,8 @@ const ThemeToggle = () => {
   return (
     <button
       className={cn(
-        'cursor-pointer fixed max-sm:hidden top-5 right-5 z-50 p-1 rounded-full transition-colors duration-300',
-        'focus:outline-hidden' //! p-2 => p-1
+        'cursor-pointer fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300',
+        'focus:outline-hidden'
       )}
       onClick={toggleTheme}
     >

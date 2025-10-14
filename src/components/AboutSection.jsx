@@ -1,9 +1,9 @@
 import { Briefcase, Code, User } from 'lucide-react';
-
+// import resume from '/public/Hassan-Web-CV.pdf';
 const AboutSection = () => {
   return (
     <section
-      id='a   bout'
+      id='about'
       className='py-24 px-4 relative'
     >
       <div className='container mx-auto max-w-5xl'>
@@ -35,7 +35,9 @@ const AboutSection = () => {
                 Get In Touch
               </a>
               <a
-                href='#'
+                target='_blank'
+                href='/Hassan-Web-CV.pdf'
+                download='Hassan-Web-Developer-CV'
                 className='px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 hover:shadow-[0_0_10px_rgba(255,255,255,0.4)]'
               >
                 Download CV

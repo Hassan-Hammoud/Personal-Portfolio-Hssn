@@ -1,5 +1,4 @@
 import { ArrowDown } from 'lucide-react';
-
 const HeroSection = () => {
   return (
     <section
@@ -19,9 +18,11 @@ const HeroSection = () => {
           </h1>
 
           <p className='text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3'>
-            I create stellar web experiences with modern technologies.
+            {/* I create stellar web experiences with modern technologies.
             Specializing in front-end development, I build interfaces that are
-            both beautiful and functional.
+            both beautiful and functional. */}
+            Full-stack developer turning ideas into fast, scalable, and visually
+            stunning web applications.
           </p>
 
           <div className='opacity-0 animate-fade-in-delay-4'>
@@ -36,7 +37,9 @@ const HeroSection = () => {
       </div>
       <div className='absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce'>
         <span className='text-sm text-muted-foreground mb-2'>Scroll</span>
-        <ArrowDown className='h-5 w-5 text-primary cursor-pointer' />
+        <a href='#about'>
+          <ArrowDown className='h-5 w-5 text-primary cursor-pointer' />
+        </a>
       </div>
     </section>
   );

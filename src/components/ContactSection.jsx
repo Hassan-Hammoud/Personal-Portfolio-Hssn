@@ -41,16 +41,16 @@ const ContactSection = () => {
           I'm always open to discussing new opportunities.
         </p>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-12'>
-          <div className='space-y-8'>
+          <div className='space-y-8 max-md:mx-auto'>
             <h3 className='text-2xl font-semibold mb-6'>Contact Information</h3>
-            <div className='space-y-6 justify-center'>
+            <div className='space-y-6 justify-between'>
               {/* ************** EMAIL ************** */}
-              <div className='flex items-start space-x-4'>
+              <div className=' text-start flex items-start space-x-4'>
                 <div className='p-3 rounded-full bg-primary/10 '>
                   <Mail className='h-6 w-6 text-primary' />
                 </div>
                 <div className=''>
-                  <h4 className='font-medium'>Email</h4>
+                  <h4 className='font-medium '>Email</h4>
                   <a
                     className='text-muted-foreground hover:text-primary transition-colors duration-300'
                     href='mailto:hassanhammoud2000@gmail.com'
@@ -61,7 +61,7 @@ const ContactSection = () => {
               </div>
 
               {/* ************** PHONE ************** */}
-              <div className='flex items-start space-x-4'>
+              <div className='text-start flex items-start space-x-4'>
                 <div className='p-3 rounded-full bg-primary/10 '>
                   <Phone className='h-6 w-6 text-primary' />
                 </div>
@@ -77,7 +77,7 @@ const ContactSection = () => {
               </div>
 
               {/* ************** LOCATION ************** */}
-              <div className='flex items-start space-x-4'>
+              <div className='text-start flex items-start space-x-4'>
                 <div className='p-3 rounded-full bg-primary/10 '>
                   <MapPin className='h-6 w-6 text-primary' />
                 </div>

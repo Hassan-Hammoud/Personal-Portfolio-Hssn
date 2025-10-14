@@ -3,24 +3,28 @@ import { cn } from '../lib/utils';
 
 const skills = [
   // Frontend
-  { name: 'HTML/CSS', level: 95, category: 'frontend' },
-  { name: 'JavaScript', level: 90, category: 'frontend' },
-  { name: 'React', level: 90, category: 'frontend' },
+  { name: 'HTML5', level: 95, category: 'frontend' },
+  { name: 'CSS3', level: 90, category: 'frontend' },
+  { name: 'JavaScript (ES6+)', level: 90, category: 'frontend' },
+  { name: 'React.js', level: 85, category: 'frontend' },
   { name: 'Tailwind CSS', level: 90, category: 'frontend' },
-  { name: 'Next.js', level: 80, category: 'frontend' },
+  { name: 'Bootstrap', level: 85, category: 'frontend' },
+  { name: 'Material UI', level: 85, category: 'frontend' },
+  { name: 'Chart.js', level: 70, category: 'frontend' },
 
   // Backend
   { name: 'Node.js', level: 80, category: 'backend' },
-  { name: 'MongoDB', level: 70, category: 'backend' },
-  { name: 'Express', level: 75, category: 'backend' },
-  // { name: 'PostgreSQL', level: 65, category: 'backend' },
-
-  { name: 'GraphQL', level: 60, category: 'backend' },
+  { name: 'Express.js', level: 75, category: 'backend' },
+  { name: 'MongoDB', level: 75, category: 'backend' },
+  { name: 'NoSQL', level: 80, category: 'backend' },
 
   // Tools
-  { name: 'Git/GitHub', level: 90, category: 'tools' },
-  { name: 'Figma', level: 65, category: 'tools' },
+  { name: 'Git & GitHub', level: 90, category: 'tools' },
+  { name: 'GitLab', level: 85, category: 'tools' },
+  { name: 'WordPress', level: 80, category: 'tools' },
   { name: 'VS Code', level: 95, category: 'tools' },
+  { name: 'Linux', level: 85, category: 'tools' },
+  { name: 'AGILE Methodology', level: 80, category: 'tools' },
 ];
 
 const categories = ['all', 'frontend', 'backend', 'tools'];

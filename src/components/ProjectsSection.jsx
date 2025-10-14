@@ -3,30 +3,70 @@ import { ArrowRight, ExternalLink, Github } from 'lucide-react';
 const projects = [
   {
     id: 1,
-    title: 'Project One',
-    description: 'A Beautiful landing page app using React and Tailwind.',
-    image: '/projects/project1.webp',
-    tags: ['React', 'TailwindCSS'],
-    demoUrl: '#',
-    github: 'https://github.com/Hassan-Hammoud',
+    title: 'Admin Dashboard',
+    description:
+      'An advanced MERN stack dashboard with Node.js, Express, and MongoDB on the backend, featuring Material UI, Nivo Charts, and Redux Toolkit for a modern and dynamic interface.',
+    image: '/AdminDashboard.jpg',
+    tags: ['Node js', 'React', 'Material UI', 'Nivo Charts', 'Redux toolkit'],
+    demoUrl: 'https://ad-dashboard-one.vercel.app/dashboard',
+    github: 'https://github.com/Hassan-Hammoud/ad-dashboard',
   },
   {
-    id: 1,
-    title: 'Project Two',
-    description: 'A Beautiful landing page app using React and Tailwind.',
-    image: '/projects/project2.webp',
-    tags: ['React', 'TailwindCSS'],
-    demoUrl: '#',
-    github: 'https://github.com/Hassan-Hammoud',
+    id: 2,
+    title: 'Chat App',
+    description:
+      'A real-time chat application built using the MERN stack and Socket.io, featuring live messaging, user authentication, and an elegant Tailwind CSS interface.',
+    image: '/ChatApp.jpg',
+    tags: [
+      'React',
+      'Socket.io',
+      'TailwindCSS',
+      'Real-time Chat',
+      'Authentication',
+    ],
+    demoUrl: 'https://chat-app-gr.vercel.app/',
+    github: 'https://github.com/Hassan-Hammoud/chat-app-gr',
   },
   {
-    id: 1,
-    title: 'Project Three',
-    description: 'A Beautiful landing page app using React and Tailwind.',
-    image: '/projects/project3.webp',
-    tags: ['React', 'TailwindCSS'],
-    demoUrl: '#',
-    github: 'https://github.com/Hassan-Hammoud',
+    id: 3,
+    title: 'MonuehShop',
+    description:
+      'A sustainable e-commerce platform built with the MERN stack, designed to showcase authentic, high-quality traditional products made by mountain village communities.',
+    image: '/ecommerce.webp',
+    tags: ['Mern', 'React', 'E-Commerce', 'Bootsrap'],
+    demoUrl: 'https://monuehshop.vercel.app/',
+    github: 'https://github.com/Hassan-Hammoud/monuehshop',
+  },
+  {
+    id: 4,
+    title: 'MERN Estate',
+    description:
+      'A full-stack real estate app built with the MERN stack, featuring property listings, user authentication, and Firebase storage. Designed with React, Redux, and TailwindCSS for a modern, seamless experience.',
+    image: '/realEstat.webp',
+    tags: ['React', 'Node.js', 'Firebase', 'Redux Toolkit', 'TailwindCSS'],
+    demoUrl: 'https://mern-estate-v48i.onrender.com/',
+    github: 'https://github.com/Hassan-Hammoud/MERN-Estate',
+  },
+  {
+    id: 5,
+    title: 'YouTube Clone',
+    description:
+      'A fully responsive YouTube clone built with React, integrating the YouTube Data API to fetch and display real-time video content. Designed with a sleek.',
+    image: '/youTube.webp',
+    tags: ['React', 'YouTube API', 'FrontendDevelopment'],
+    demoUrl: 'https://youtube-clone-red-iota.vercel.app/',
+    github: 'https://github.com/Hassan-Hammoud/youtube-clone',
+  },
+
+  {
+    id: 6,
+    title: 'Template Three',
+    description:
+      'A fully responsive multi-section website template built with HTML, CSS, and JavaScript. Ideal for landing pages or personal portfolios.',
+    image: '/PortfolioHa.jpg',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
+    demoUrl: 'https://template-three.onrender.com/#',
+    github: 'https://github.com/Hassan-Hammoud/template-three',
   },
 ];
 
@@ -70,7 +110,7 @@ const ProjectsSection = () => {
                 </div>
 
                 <h3 className='text-xl font-semibold mb-1'>{project.title}</h3>
-                <p className='text-muted-foreground text-sm mb-4'>
+                <p className=' text-muted-foreground text-sm mb-4'>
                   {project.description}
                 </p>
                 <div className='flex justify-between items-center'>

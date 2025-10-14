@@ -40,7 +40,7 @@ const Navbar = () => {
           </span>
         </a>
         {/* **************** DESKTOP NAV **************** */}
-        <div className='hidden md:flex space-x-8'>
+        <div className='hidden md:flex space-x-8 mr-8'>
           {navItems.map((item, index) => (
             <a
               className='text-foreground/80 hover:text-primary transition-colors duration-300'
@@ -53,7 +53,7 @@ const Navbar = () => {
         </div>
         {/* **************** MOBILE NAV **************** */}
         <button
-          className='md:hidden p-2 text-foreground z-50'
+          className='md:hidden p-2 text-foreground z-50 cursor-pointer'
           onClick={() => setIsMenuOpen(prev => !prev)}
           aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}
         >
