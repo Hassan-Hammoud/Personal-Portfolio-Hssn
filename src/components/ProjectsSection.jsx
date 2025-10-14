@@ -6,7 +6,9 @@ const projects = [
     title: 'Admin Dashboard',
     description:
       'An advanced MERN stack dashboard with Node.js, Express, and MongoDB on the backend, featuring Material UI, Nivo Charts, and Redux Toolkit for a modern and dynamic interface.',
-    image: '/AdminDashboard.jpg',
+    // image: '/AdminDashboard.jpg',
+    image:
+      'https://res.cloudinary.com/dmmtbk5lg/image/upload/v1760453508/AdminDashboard_ihl4dg.jpg',
     tags: ['Node js', 'React', 'Material UI', 'Nivo Charts', 'Redux toolkit'],
     demoUrl: 'https://ad-dashboard-one.vercel.app/dashboard',
     github: 'https://github.com/Hassan-Hammoud/ad-dashboard',
@@ -16,7 +18,9 @@ const projects = [
     title: 'Chat App',
     description:
       'A real-time chat application built using the MERN stack and Socket.io, featuring live messaging, user authentication, and an elegant Tailwind CSS interface.',
-    image: '/ChatApp.jpg',
+    // image: '/ChatApp.jpg',
+    image:
+      'https://res.cloudinary.com/dmmtbk5lg/image/upload/v1760453510/ChatApp_fawp0q.jpg',
     tags: [
       'React',
       'Socket.io',
@@ -32,7 +36,10 @@ const projects = [
     title: 'MonuehShop',
     description:
       'A sustainable e-commerce platform built with the MERN stack, designed to showcase authentic, high-quality traditional products made by mountain village communities.',
-    image: '/ecommerce.webp',
+    // image: '/ecommerce.webp',
+    image:
+      'https://res.cloudinary.com/dmmtbk5lg/image/upload/v1760453507/ecommerce_byze0l.webp',
+
     tags: ['Mern', 'React', 'E-Commerce', 'Bootsrap'],
     demoUrl: 'https://monuehshop.vercel.app/',
     github: 'https://github.com/Hassan-Hammoud/monuehshop',
@@ -42,7 +49,9 @@ const projects = [
     title: 'MERN Estate',
     description:
       'A full-stack real estate app built with the MERN stack, featuring property listings, user authentication, and Firebase storage. Designed with React, Redux, and TailwindCSS for a modern, seamless experience.',
-    image: '/realEstat.webp',
+    // image: '/realEstat.webp',
+    image:
+      'https://res.cloudinary.com/dmmtbk5lg/image/upload/v1760453509/realEstat_rnhfez.webp',
     tags: ['React', 'Node.js', 'Firebase', 'Redux Toolkit', 'TailwindCSS'],
     demoUrl: 'https://mern-estate-v48i.onrender.com/',
     github: 'https://github.com/Hassan-Hammoud/MERN-Estate',
@@ -52,7 +61,9 @@ const projects = [
     title: 'YouTube Clone',
     description:
       'A fully responsive YouTube clone built with React, integrating the YouTube Data API to fetch and display real-time video content. Designed with a sleek.',
-    image: '/youTube.webp',
+    // image: '/youTube.webp',
+    image:
+      'https://res.cloudinary.com/dmmtbk5lg/image/upload/v1760453509/youTube_qasgen.webp',
     tags: ['React', 'YouTube API', 'FrontendDevelopment'],
     demoUrl: 'https://youtube-clone-red-iota.vercel.app/',
     github: 'https://github.com/Hassan-Hammoud/youtube-clone',
@@ -63,7 +74,9 @@ const projects = [
     title: 'Template Three',
     description:
       'A fully responsive multi-section website template built with HTML, CSS, and JavaScript. Ideal for landing pages or personal portfolios.',
-    image: '/PortfolioHa.jpg',
+    // image: '/PortfolioHa.jpg',
+    image:
+      'https://res.cloudinary.com/dmmtbk5lg/image/upload/v1760453510/PortfolioHa_vwzcas.jpg',
     tags: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
     demoUrl: 'https://template-three.onrender.com/#',
     github: 'https://github.com/Hassan-Hammoud/template-three',
