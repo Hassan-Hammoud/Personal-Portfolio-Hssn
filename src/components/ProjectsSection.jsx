@@ -11,7 +11,7 @@ const projects = [
       'https://res.cloudinary.com/dmmtbk5lg/image/upload/v1760453508/AdminDashboard_ihl4dg.jpg',
     tags: ['Node js', 'React', 'Material UI', 'Nivo Charts', 'Redux toolkit'],
     demoUrl: 'https://ad-dashboard-one.vercel.app/dashboard',
-    github: 'https://github.com/Hassan-Hammoud/ad-dashboard',
+    github: 'https://github.com/Hassan-Hammoud/Ad-Dashboard-One-Front.git',
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ const projects = [
       'Authentication',
     ],
     demoUrl: 'https://chat-app-gr.vercel.app/',
-    github: 'https://github.com/Hassan-Hammoud/chat-app-gr',
+    github: 'https://github.com/Hassan-Hammoud/Chat-App-GR-Client.git',
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ const projects = [
 
     tags: ['Mern', 'React', 'E-Commerce', 'Bootsrap'],
     demoUrl: 'https://monuehshop.vercel.app/',
-    github: 'https://github.com/Hassan-Hammoud/monuehshop',
+    github: 'https://github.com/Final-project-3Ha/deployment-2.git',
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ const projects = [
       'https://res.cloudinary.com/dmmtbk5lg/image/upload/v1760453509/realEstat_rnhfez.webp',
     tags: ['React', 'Node.js', 'Firebase', 'Redux Toolkit', 'TailwindCSS'],
     demoUrl: 'https://mern-estate-v48i.onrender.com/',
-    github: 'https://github.com/Hassan-Hammoud/MERN-Estate',
+    github: 'https://github.com/Hassan-Hammoud/mern-estate-front.git',
   },
   {
     id: 5,
@@ -66,7 +66,7 @@ const projects = [
       'https://res.cloudinary.com/dmmtbk5lg/image/upload/v1760453509/youTube_qasgen.webp',
     tags: ['React', 'YouTube API', 'FrontendDevelopment'],
     demoUrl: 'https://youtube-clone-red-iota.vercel.app/',
-    github: 'https://github.com/Hassan-Hammoud/youtube-clone',
+    github: 'https://github.com/Hassan-Hammoud/YouTube-Clone-GR.git',
   },
 
   {
@@ -79,7 +79,7 @@ const projects = [
       'https://res.cloudinary.com/dmmtbk5lg/image/upload/v1760453510/PortfolioHa_vwzcas.jpg',
     tags: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
     demoUrl: 'https://template-three.onrender.com/#',
-    github: 'https://github.com/Hassan-Hammoud/template-three',
+    github: 'https://github.com/Hassan-Hammoud/Template-Three.git',
   },
 ];
 
