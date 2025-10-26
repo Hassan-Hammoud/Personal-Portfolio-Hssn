@@ -245,7 +245,7 @@ const ContactSection = () => {
                   placeholder="Hello, I'd like to talk about..."
                 />
               </div>
-              <div className='flex justify-center scale-90 md:scale-100 origin-left'>
+              <div className='flex justify-center scale-90 md:scale-100 text-center'>
                 <ReCAPTCHA
                   sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                   onChange={token => setCaptchaToken(token)}
