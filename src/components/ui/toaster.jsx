@@ -12,7 +12,7 @@ export function Toaster() {
   const { toasts } = useToast();
 
   return (
-    <ToastProvider>
+    <ToastProvider duration={5000}>
       {toasts.map(function ({ id, title, description, action, ...props }) {
         return (
           <Toast
@@ -20,9 +20,15 @@ export function Toaster() {
             {...props}
           >
             <div className='grid gap-1'>
-              {title && <ToastTitle>{title}</ToastTitle>}
+              {title && (
+                <ToastTitle className='text-primary font-semibold'>
+                  {title}
+                </ToastTitle>
+              )}
               {description && (
-                <ToastDescription>{description}</ToastDescription>
+                <ToastDescription className='text-muted-foreground'>
+                  {description}
+                </ToastDescription>
               )}
             </div>
             {action}

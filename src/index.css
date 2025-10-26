@@ -63,6 +63,31 @@
       opacity: 0;
     }
   }
+
+  @keyframes toast-in {
+    from {
+      transform: translateX(calc(100% + 1rem));
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes toast-out {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(calc(100% + 1rem));
+      opacity: 0;
+    }
+  }
+
+  --animate-toast-in: toast-in 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-toast-out: toast-out 0.3s ease-in forwards;
 }
 
 @layer base {
@@ -93,6 +118,8 @@
   --primary: 250 55% 60%;
   --primary-foreground: 0 0% 100%;   
 
+  --secondary: 210 40% 98%;
+
   /* Cosmic effects */
   --star: 255 75% 75%;  
   --meteor: 260 65% 68%; 
@@ -109,6 +136,8 @@
 
     --border: 217 33% 20%;
 
+    --secondary: 222 47% 10%;
+
     --star: 0 0% 100%; 
     --meteor: 0 0% 90%;
   }
@@ -123,6 +152,25 @@
   
   body {
     @apply bg-background text-foreground transition-colors duration-300;font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* ReCAPTCHA Custom Styling */
+  iframe[src*="recaptcha"] {
+    border-radius: 8px;
+  }
+  
+  .g-recaptcha > div {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+  
+  @media (max-width: 768px) {
+    .g-recaptcha > div {
+      transform: scale(0.85);
+      transform-origin: left;
+      margin-left: -10px;
+    }
   }
 }
 

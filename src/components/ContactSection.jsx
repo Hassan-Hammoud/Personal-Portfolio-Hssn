@@ -1,4 +1,3 @@
-import emailjs from '@emailjs/browser';
 import {
   Facebook,
   Github,
@@ -9,46 +8,85 @@ import {
   Phone,
   Send,
 } from 'lucide-react';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import { useToast } from '../hooks/use-toast';
 import { cn } from '../lib/utils';
 
 const ContactSection = () => {
   const { toast } = useToast();
   const form = useRef();
+  const recaptchaRef = useRef(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const handleSubmit = e => {
+  const [captchaToken, setCaptchaToken] = useState('');
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    // Check initial theme
+    setTheme(
+      document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+    );
+
+    // Watch for theme changes
+    const observer = new MutationObserver(() => {
+      setTheme(
+        document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+      );
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class'],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const handleSubmit = async e => {
     e.preventDefault();
     setIsSubmitting(true);
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_EMAILJS_YOUR_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_YOUR_TEMPLATE_ID,
-        form.current,
+
+    const formData = new FormData(form.current);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message'),
+      captchaToken,
+    };
+
+    try {
+      const res = await fetch(
+        import.meta.env.VITE_BACKEND_URL + '/api/contact' ||
+          'http://localhost:5000/api/contact',
         {
-          publicKey: import.meta.env.VITE_EMAILJS_YOUR_PUBLIC_KEY,
-        }
-      )
-      .then(
-        () => {
-          toast({
-            title: 'Message sent!',
-            description:
-              "Thank you for your message. I'll get back to you soon.",
-          });
-          setIsSubmitting(false);
-          e.target.reset();
-        },
-        error => {
-          toast({
-            title: 'Error sending message',
-            description: error.text,
-            variant: 'destructive',
-          });
-          console.error('FAILED...', error.text);
-          setIsSubmitting(false);
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
         }
       );
+
+      const result = await res.json();
+      if (!res.ok) throw new Error(result.error || 'Failed to send message.');
+
+      toast({
+        title: 'Message sent!',
+        description: "Thank you for your message. I'll reply soon.",
+      });
+      form.current.reset();
+      setCaptchaToken('');
+      // Reset ReCAPTCHA after successful submission
+      if (recaptchaRef.current) {
+        recaptchaRef.current.reset();
+      }
+    } catch (err) {
+      toast({
+        title: 'Error sending message',
+        description: err.message,
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -166,7 +204,7 @@ const ContactSection = () => {
                 <input
                   type='text'
                   id='name'
-                  name='user_name'
+                  name='name'
                   className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary'
                   required
                   placeholder='John Doe...'
@@ -205,6 +243,14 @@ const ContactSection = () => {
                   className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none'
                   required
                   placeholder="Hello, I'd like to talk about..."
+                />
+              </div>
+              <div className='flex justify-center scale-90 md:scale-100 origin-left'>
+                <ReCAPTCHA
+                  sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                  onChange={token => setCaptchaToken(token)}
+                  theme={theme}
+                  ref={recaptchaRef}
                 />
               </div>
               <button
