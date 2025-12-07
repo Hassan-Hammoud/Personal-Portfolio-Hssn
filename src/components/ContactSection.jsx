@@ -115,9 +115,9 @@ const ContactSection = () => {
                   <h4 className='font-medium '>Email</h4>
                   <a
                     className='text-muted-foreground hover:text-primary transition-colors duration-300'
-                    href='mailto:hassanhammoud2000@gmail.com'
+                    href='mailto:hassan3h.dev@gmail.com'
                   >
-                    hassan3HaWebDev@gmail.com
+                    hassan3h.dev@gmail.com
                   </a>
                 </div>
               </div>
@@ -245,7 +245,7 @@ const ContactSection = () => {
                   placeholder="Hello, I'd like to talk about..."
                 />
               </div>
-              <div className='flex justify-center scale-90 md:scale-100 text-center'>
+              <div className='flex justify-center scale-90 md:scale-100 text-center '>
                 <ReCAPTCHA
                   sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                   onChange={token => setCaptchaToken(token)}
