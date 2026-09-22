@@ -36,8 +36,8 @@ const AboutSection = () => {
               </a>
               <a
                 target='_blank'
-                href='/Hassan-Web-CV.pdf'
-                download='Hassan-Web-Developer-CV'
+                href='/Hassan-Full-Stack-CV.pdf'
+                download='Hassan-Full-Stack-Developer-CV'
                 className='px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 hover:shadow-[0_0_10px_rgba(255,255,255,0.4)]'
               >
                 Download CV
