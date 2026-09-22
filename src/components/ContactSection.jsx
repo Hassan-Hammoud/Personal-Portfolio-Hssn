@@ -1,5 +1,4 @@
 import {
-  Facebook,
   Github,
   Instagram,
   Linkedin,
@@ -24,13 +23,13 @@ const ContactSection = () => {
   useEffect(() => {
     // Check initial theme
     setTheme(
-      document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+      document.documentElement.classList.contains('dark') ? 'dark' : 'light',
     );
 
     // Watch for theme changes
     const observer = new MutationObserver(() => {
       setTheme(
-        document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+        document.documentElement.classList.contains('dark') ? 'dark' : 'light',
       );
     });
 
@@ -62,7 +61,7 @@ const ContactSection = () => {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data),
-        }
+        },
       );
 
       const result = await res.json();
@@ -168,13 +167,13 @@ const ContactSection = () => {
                 >
                   <Github size={24} />
                 </a>
-                <a
+                {/* <a
                   className='text-muted-foreground hover:text-primary transition-colors duration-300'
                   target='_blank'
                   href='https://www.facebook.com/hassan.hammoud.7127'
                 >
                   <Facebook size={24} />
-                </a>
+                </a> */}
                 <a
                   className='text-muted-foreground hover:text-primary transition-colors duration-300'
                   target='_blank'
@@ -257,7 +256,7 @@ const ContactSection = () => {
                 type='submit'
                 disabled={isSubmitting}
                 className={cn(
-                  'cosmic-button w-full flex items-center justify-center gap-2 cursor-pointer'
+                  'cosmic-button w-full flex items-center justify-center gap-2 cursor-pointer',
                 )}
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}

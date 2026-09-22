@@ -18,6 +18,12 @@ const skills = [
   { name: 'MongoDB', level: 75, category: 'backend' },
   { name: 'NoSQL', level: 80, category: 'backend' },
 
+  // Cloud & AWS
+  { name: 'AWS Cloud Fundamentals', level: 60, category: 'cloud' },
+  { name: 'AWS Technical Essentials', level: 55, category: 'cloud' },
+  { name: 'Serverless', level: 45, category: 'cloud' },
+  { name: 'Containers', level: 45, category: 'cloud' },
+
   // Tools
   { name: 'Git & GitHub', level: 90, category: 'tools' },
   { name: 'GitLab', level: 85, category: 'tools' },
@@ -27,13 +33,13 @@ const skills = [
   { name: 'AGILE Methodology', level: 80, category: 'tools' },
 ];
 
-const categories = ['all', 'frontend', 'backend', 'tools'];
+const categories = ['all', 'frontend', 'backend', 'cloud', 'tools'];
 
 const SkillsSections = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const filteredSkills = skills.filter(
-    skill => activeCategory === 'all' || skill.category === activeCategory
+    skill => activeCategory === 'all' || skill.category === activeCategory,
   );
   return (
     <section
@@ -54,7 +60,7 @@ const SkillsSections = () => {
                 'px-5 py-2 rounded-full transition-colors duration-300 capitalize cursor-pointer',
                 activeCategory === category
                   ? 'bg-primary text-primary-foreground'
-                  : 'bg-secondary/70 text-foreground hover:bg -secondary'
+                  : 'bg-secondary/70 text-foreground hover:bg -secondary',
               )}
             >
               {category}
